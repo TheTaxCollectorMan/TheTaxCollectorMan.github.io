@@ -572,6 +572,9 @@ input[type=checkbox] {
 img {
   border: solid 2px #7b8484;
 }
+.displayed {
+  border: none;
+}
 a {
   text-decoration: none;
   color: #e03644;
