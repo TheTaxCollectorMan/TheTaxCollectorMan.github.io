@@ -1,89 +1,109 @@
 <!DOCTYPE html>
 <html lang=en>
+
+<head>
 	<title>Goblin Zone</title>
-	<link rel="shortcut icon" type= "image/jpg" href="./icon/lambda.png"/>
+	<link rel="shortcut icon" type="image/jpg" href="./icon/lambda.png" />
 	<link rel=stylesheet type=text/css href="./styles/blacksteam/blacksteam.css">
-    <head>
-		
 
-</style>
-        <style>
-			/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float: left;
-  width: 10%;
-  padding: 50px;
-}
+	<style>
+		/* Three image containers (use 25% for four, and 50% for two, etc) */
+		.column {
+			float: left;
+			width: 10%;
+			padding: 50px;
+		}
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-			.marginauto {
-    margin: 10px auto 20px;
-    display: block;
-}
-			.center {
+		/* Clear floats after image containers */
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		.marginauto {
+			margin: 10px auto 20px;
 			display: block;
-  margin-left: auto;
-  margin-right: auto;
-			}
-			.header {
-				display: flex;
-			}
-			.container {
-				justify-content: flex-start
-			}
-        p.ex1 {
-          margin: 1px;
-        }
-        p.ex2 {
-            display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-        }
-		.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
+		}
 
-        </style>
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-        </head> 
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.header {
+			display: flex;
+		}
+
+		.container {
+			justify-content: flex-start
+		}
+
+		p.ex1 {
+			margin: 1px;
+		}
+
+		p.ex2 {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 40%;
+		}
+
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
 	<main>
 		<nav>
-			<li><a href= "index.html">Home</a></li>
-			<li><a href= "Writing.html">Writing</a></li>
-			<li><a href= "BorealAlyph.html">Boreal Alyph </a></li>
-			<li><a href= "VaultMaps.html">VaultMaps</a></li>
-			<li><a href= "Half-Life Discord.html">Half-Life Discord</a></li>
-			<li><a href= "SecretProject.html">Secret Project</a></li>
-			</li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Writing.html">Writing</a></li>
+			<li><a href="BorealAlyph.html">Boreal Alyph </a></li>
+			<li><a href="VaultMaps.html">VaultMaps</a></li>
+			<li><a href="Half-Life Discord.html">Half-Life Discord</a></li>
+			<li><a href="SecretProject.html">Secret Project</a></li>
 		</nav>
 		<meta name="description" content="A page for VaultMaps!" />
-			<div class="window" name="PUBLIC RELATIONS">
-				<h1>VaultMaps</h1>
-				<div class="box inset">
-					<p><code>VaultMaps</code> is an anthology of month-long mapping competitions for the 
-						Source 2 engine, centralizing primarily around creating VR 
-						experiences for Half-Life: Alyx. As a co-founder and organizer, my 
-						objectives on the project involved hosting brainstorming sessions, 
-						working with third-party graphic designers to create brand and PR 
-						content, organizing and launching new competitions, and providing 
-						support to entrants. 
-						</p>
-					<img src="VaultMapsCard.png" class="center">
-					<div class="box rounded">
-						<p>You can learn more about VaultMaps at its <a href="https://twitter.com/vaultmaps" target="_blank" rel="noopener noreferrer">Twitter account</a>!</p>
-					</div>
+		<div class="window" name="PUBLIC RELATIONS">
+			<h1>VaultMaps</h1>
+			<div class="box inset">
+				<p><code>VaultMaps</code> is an anthology of month-long mapping competitions for the
+					Source 2 engine, centralizing primarily around creating VR
+					experiences for Half-Life: Alyx. As a co-founder and organizer, my
+					objectives on the project involved hosting brainstorming sessions,
+					working with third-party graphic designers to create brand and PR
+					content, organizing and launching new competitions, and providing
+					support to entrants.
+				</p>
+				<img src="VaultMapsCard.png" class="center">
+				<div class="box rounded">
+					<p>You can learn more about VaultMaps at its <a href="https://twitter.com/vaultmaps" target="_blank"
+							rel="noopener noreferrer">Twitter account</a>!</p>
 				</div>
+			</div>
 	</main>
+	<script>
+		const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		const title = document.getElementsByTagName("li")[5].firstChild;
+
+		setInterval(() => {
+			let newTitle = "";
+
+			for (let i = 0; i < title.innerText.length; i++) {
+				newTitle += chars[Math.floor(Math.random() * chars.length)];
+			}
+
+			title.innerText = newTitle;
+		}, 50);
+	</script>
+</body>
+
 </html>
-
-
-
